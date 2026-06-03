@@ -30,7 +30,7 @@ jobs:
         sudo apt-get install -y trivy             # ✅ Fixed: added -y
 
     - name: Trivy for Scan
-      run: trivy fs --format table -o fs-report.json .
+      run: trivy fs --format table --severity HIGH,CRITICAL -o fs-report.txt .
 
 
 
